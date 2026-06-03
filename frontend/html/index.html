@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Panthi Clinic | Precision Dental Excellence</title>
+    
+    <!-- 
+       1. Typography & Iconography CDN Imports
+       - Libre Caslon Text: Pairs elegant luxury with clinical precision.
+       - Hanken Grotesk: Clean modern grotesque for technical UI and body legibility.
+       - Material Symbols Outlined: Used for rich clinical vector iconography.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- 
+       2. Tailwind CSS CDN
+       Compiles custom responsive grids and utility styles on the fly.
+    -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- 
+       3. Shared Design System Tokens
+       Loads modular custom colors, corner radii, and typography metrics from a unified configuration.
+    -->
+    <script src="../js/tailwind-config.js"></script>
+    
+    <!-- 
+       4. Custom Stylesheets
+       Loads custom glassmorphic panels, 3D ambient shadow overlays, and layout systems.
+    -->
+    <link href="../css/style.css" rel="stylesheet"/>
+</head>
+<body class="font-body-md text-body-md text-on-background">
+
+    <!-- 
+       ====================================================
+       TOP NAVIGATION BAR
+       ====================================================
+       Features a glassmorphic blur background overlay and sticky placement.
+    -->
+    <header class="sticky top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-glass-border shadow-md">
+        <div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+            <!-- Brand Logo -->
+            <a href="/" class="text-headline-md font-headline-md text-deep-teal hover:opacity-90 transition-opacity">
+                Panthi Clinic
+            </a>
+            
+            <!-- Desktop Nav Menu links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-label-lg text-label-lg text-on-surface-variant border-b-2 border-transparent pb-1 hover:text-electric-cyan hover:border-electric-cyan transition-all duration-300" href="#services">Services</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant border-b-2 border-transparent pb-1 hover:text-electric-cyan hover:border-electric-cyan transition-all duration-300" href="#technology">Technology</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant border-b-2 border-transparent pb-1 hover:text-electric-cyan hover:border-electric-cyan transition-all duration-300" href="#testimonials">Testimonials</a>
+                <a class="font-label-lg text-label-lg text-on-surface-variant border-b-2 border-transparent pb-1 hover:text-electric-cyan hover:border-electric-cyan transition-all duration-300" href="#about">About</a>
+            </nav>
+            
+            <!-- Call to Action button: Links directly to booking page -->
+            <a href="/appointment" class="bg-deep-teal text-white px-6 py-2.5 rounded-full font-label-lg text-label-lg hover:bg-primary scale-95 active:scale-90 transition-all duration-300 shadow-lg text-center">
+                Book Appointment
+            </a>
+        </div>
+    </header>
+
+    <!-- 
+       ====================================================
+       MAIN CONTENT CONTAINER
+       ====================================================
+    -->
+    <main>
+        
+        <!-- 
+           HERO SECTION
+           Combines floating cyan blurs, elegant editorial layouts, and a primary call-to-action.
+        -->
+        <section class="relative min-h-[921px] flex items-center pt-20 pb-32 overflow-hidden">
+            
+            <!-- Animated Background Blurs (Atmospheric lighting overlays) -->
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+                <div class="absolute top-1/4 right-10 w-96 h-96 bg-electric-cyan rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-32 w-80 h-80 bg-deep-teal rounded-full mix-blend-multiply filter blur-3xl"></div>
+            </div>
+            
+            <!-- Grid Layout wrapper -->
+            <div class="max-w-container-max mx-auto px-margin-desktop w-full grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column: Copy & CTAs -->
+                <div class="z-10 space-y-8">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed/30 text-deep-teal font-label-lg text-label-lg border border-secondary-fixed">
+                        Est. 2024 • Advanced Clinical Care
+                    </span>
+                    
+                    <h1 class="font-display-lg text-display-lg text-primary leading-tight">
+                        Precision Dental <br/>
+                        <span class="text-gradient">Excellence</span> Meets <br/>
+                        Modern Care.
+                    </h1>
+                    
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Experience the future of dentistry with our advanced 3D technology and compassionate team. We blend clinical mastery with ethereal comfort.
+                    </p>
+                    
+                    <!-- Integrated CTA Links -->
+                    <div class="flex items-center gap-6">
+                        <a href="./appointment.html" class="bg-deep-teal text-white px-8 py-4 rounded-xl font-label-lg text-label-lg hover:shadow-2xl transition-all 3d-shadow text-center">
+                            Book Appointment
+                        </a>
+                        <button class="flex items-center gap-2 text-deep-teal font-label-lg text-label-lg group">
+                            <span class="w-10 h-10 rounded-full border border-deep-teal flex items-center justify-center group-hover:bg-deep-teal group-hover:text-white transition-all">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            </span>
+                            View Our Tech
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Interactive 3D Parallax Visual Frame -->
+                <div class="relative z-10 flex justify-center items-center">
+                    
+                    <!-- Glassmorphic Hero Card (Triggers 3D Parallax Tilt script) -->
+                    <div class="glass-card 3d-shadow p-unit rounded-[2rem] w-full max-w-md transform rotate-2 hover:rotate-0 transition-transform duration-700">
+                        <div class="aspect-[4/5] rounded-[1.5rem] overflow-hidden">
+                            <img alt="Advanced Dental Care" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500" data-alt="A futuristic and clinical dental operatory with clean white surfaces..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBs1Sgawylx11neWaxorDUctU5lZ9Z-DNwglwIJFc8FNYf-JvxzrBLQBCw-p0LtF0NQxVao9ac6UFNWEJ1_-cuJP8F7qRv9fry4A-l5Ff1Ca5XZVHjFPaxXSgazIwnqHg2oNG3CmtKVBfAHOJcG8662ZC8MycwxfvhYZq89O1K59qGx2VYF_yoW62DQuViMwrKm6wl87koz3ZE2eIpeGMRniAZ2a0gEY5oi2oBwIgQZAJy0qjx6JiukxeZJAywETWTi4GO1SUZHq8"/>
+                        </div>
+                        <div class="mt-6 space-y-2 px-4 pb-4 text-center">
+                            <h3 class="font-headline-md text-headline-md text-deep-teal">Clinical Mastery</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Advanced diagnostics for lasting results.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bouncing badge removed as requested -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+           OUR TECHNOLOGY SECTION (Bento Grid)
+           A modern mosaic highlighting same-day services, CBCT scans, AI algorithms, and water lasers.
+        -->
+        <section id="technology" class="py-32 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                
+                <!-- Section Header -->
+                <div class="mb-16 text-center max-w-2xl mx-auto">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Future is 3D</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">We utilize the latest in medical visualization to ensure your treatment is precise, predictable, and painless.</p>
+                </div>
+                
+                <!-- Bento Grid Layout -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    
+                    <!-- Tech Card 1: 3D CBCT (Large Glassmorphic Panel) -->
+                    <div class="md:col-span-8 glass-card rounded-3xl p-8 flex flex-col md:flex-row gap-8 3d-shadow hover:translate-y-[-8px] transition-transform">
+                        <div class="md:w-1/2 aspect-video rounded-2xl overflow-hidden">
+                            <img alt="3D Imaging" class="w-full h-full object-cover" data-alt="A macro shot of a high-resolution 3D dental scan..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEp448HO9S4oQ0C3f-CFLfyiEM9XzhDyb64wBUAMj6JPaQFoTryu86rdti5Ivnb8ljTA8tJNTTlGkRzGga7qJKTsXSxRXTyhPq46pLvSWxEnPjsN4LLyjkNKmp1bFflYXT-HOZUHEhW577Z_eXZptM0dTRvBqSd8pabMrgt8yK4qZchWEsaCfK4gHia0EPoAlW18angMCq1OBvci714cOYu0maadoftFT-UmGjL52jIjzWfN6WYvazIzV0VQmHfkCp9k0_oAeIwbY"/>
+                        </div>
+                        <div class="md:w-1/2 flex flex-col justify-center space-y-4">
+                            <span class="text-electric-cyan font-label-lg text-label-lg uppercase tracking-widest">Advanced Imaging</span>
+                            <h3 class="font-headline-md text-headline-md text-primary">CBCT 3D X-Rays</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">See your dental health in three dimensions. Our low-radiation scans provide unprecedented clarity for implants and surgeries.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Card 2: 3D Printing (High Elevation Accent Block) -->
+                    <div class="md:col-span-4 bg-deep-teal rounded-3xl p-8 flex flex-col justify-between 3d-shadow text-white hover:translate-y-[-8px] transition-transform">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-electric-cyan text-3xl">print</span>
+                        </div>
+                        <div class="mt-12">
+                            <h3 class="font-headline-md text-headline-md mb-2">3D Printing</h3>
+                            <p class="font-body-md text-body-md text-white/80">Same-day surgical guides and temporaries, printed with medical-grade precision in our on-site lab.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Card 3: AI Diagnostics (Minimalist Glassmorphic Block) -->
+                    <div class="md:col-span-4 glass-card rounded-3xl p-8 3d-shadow hover:translate-y-[-8px] transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-electric-cyan/10 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-deep-teal">precision_manufacturing</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md text-primary mb-2">AI Diagnosis</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Predictive modeling for orthodontics ensures your smile journey is efficient and accurate.</p>
+                    </div>
+                    
+                    <!-- Tech Card 4: Laser Tech (Large Glassmorphic Panel) -->
+                    <div class="md:col-span-8 glass-card rounded-3xl p-8 flex flex-col-reverse md:flex-row gap-8 3d-shadow hover:translate-y-[-8px] transition-transform">
+                        <div class="md:w-1/2 flex flex-col justify-center space-y-4">
+                            <span class="text-electric-cyan font-label-lg text-label-lg uppercase tracking-widest">Laser Tech</span>
+                            <h3 class="font-headline-md text-headline-md text-primary">WaterLase Technology</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Minimally invasive laser dentistry for soft tissue procedures. Less discomfort, faster healing times.</p>
+                        </div>
+                        <div class="md:w-1/2 aspect-video rounded-2xl overflow-hidden">
+                            <img alt="Laser Dentistry" class="w-full h-full object-cover" data-alt="A sleek, modern dental laser instrument..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxcsxabaMt1iMtpe4fq7xEFiJaOjAIhH8va-CsBq6v3b9XdrnNod5jtrlNxS3wcQ2iuMrdmOLAOefJC7Eiqg2noZZiWAjisnk301tENaOttaiqmtFHVCFwRfcsdeBEFG1PIo4tdlzF8gV-it1QXukIRxrfexbsVCEnVnMe9eL3pGSNebltbd3Rg_YpCyb2FdOK1ycpIn8QU1Vpw3mYPSRU25bkuh11YzUEg-8xnQSrdJdSQAlrARMZx0-Ei_iCKh-SbAToRWu3G5Q"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+           SPECIALIZED SERVICES SECTION
+           Cards feature 45-degree linear gradients on hover triggers to highlight dental specialties.
+        -->
+        <section id="services" class="py-32">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Expertise</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Specialized treatments tailored to your unique dental blueprint, powered by digital innovation.</p>
+                    </div>
+                    <a class="text-deep-teal font-label-lg text-label-lg flex items-center gap-2 group hover:text-electric-cyan transition-colors" href="#">
+                        View All Services
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Service Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    
+                    <!-- Service 1: Digital Ortho -->
+                    <div class="group relative bg-surface p-1 rounded-3xl 3d-shadow hover:bg-gradient-to-br from-electric-cyan/20 to-transparent transition-all duration-500">
+                        <div class="bg-surface rounded-[calc(1.5rem-2px)] p-8 h-full">
+                            <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-symbols-outlined text-4xl text-deep-teal" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-4">Digital Orthodontics</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Invisible aligners and precision braces planned with advanced 3D tooth movement simulation.</p>
+                            <ul class="space-y-3 font-body-md text-body-md text-on-surface">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Clear Aligners</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>3D Smile Preview</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Accelerated Growth</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2: Computer-Guided Implants -->
+                    <div class="group relative bg-surface p-1 rounded-3xl 3d-shadow hover:bg-gradient-to-br from-electric-cyan/20 to-transparent transition-all duration-500">
+                        <div class="bg-surface rounded-[calc(1.5rem-2px)] p-8 h-full">
+                            <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-symbols-outlined text-4xl text-deep-teal" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-4">Computer-Guided Implants</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Restoring function with sub-millimeter accuracy using digital surgical guides and 3D imaging.</p>
+                            <ul class="space-y-3 font-body-md text-body-md text-on-surface">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Same-Day Loading</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Guided Bone Regen</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Digital Crown Prep</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3: Aesthetic Veneers -->
+                    <div class="group relative bg-surface p-1 rounded-3xl 3d-shadow hover:bg-gradient-to-br from-electric-cyan/20 to-transparent transition-all duration-500">
+                        <div class="bg-surface rounded-[calc(1.5rem-2px)] p-8 h-full">
+                            <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-symbols-outlined text-4xl text-deep-teal" style="font-variation-settings: 'FILL' 1;">face</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-4">Aesthetic Veneers</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Hand-crafted smile makeovers designed digitally to match your facial symmetry and natural features.</p>
+                            <ul class="space-y-3 font-body-md text-body-md text-on-surface">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>DSD Digital Design</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Porcelain Artistry</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-electric-cyan text-sm">check_circle</span>Full Mouth Rehab</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+           PATIENT STORIES SECTION (Horizontal Scroll Layout)
+           Translucent sliding containers showcasing real patient satisfaction quotes and avatars.
+        -->
+        <section id="testimonials" class="py-32 bg-surface-dim/30 overflow-hidden">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                
+                <!-- Section Header -->
+                <div class="mb-16 text-center">
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Patient Stories</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Real results from our clinic community.</p>
+                </div>
+                
+                <!-- Slider Wrapper (Responsive: Swipeable Row on Mobile, Elegant 3-Column Grid on Laptops/PCs) -->
+                <div class="flex lg:grid lg:grid-cols-3 gap-gutter overflow-x-auto lg:overflow-x-visible pb-12 snap-x no-scrollbar">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="min-w-[320px] md:min-w-[400px] lg:min-w-0 glass-card p-10 rounded-[2.5rem] 3d-shadow snap-center flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-electric-cyan mb-6">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <p class="font-body-lg text-body-lg text-primary leading-relaxed mb-8">
+                                "The 3D diagnostic scan and digital preview of my smile was incredible. I knew exactly what my smile would look like before we even started, and the actual treatment matched it perfectly."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                <img alt="Sarah M." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg9hPhAi-EnAvMIsEl2HaUl4aBsZIoTVzUFVVwLuhbunLBe7CRuiI7xMWnRF8q15mEzN-bXG_LEICY0J3XYavbUiyWuXyrGkpe7KuBd1UUcFKXFnfRUxapeh5L_IL68YxKtcBAwcxJMvR4kzAsA_6qbhhABma-0XvqIyly--p-02DgYp7ECGR2T-6NXCyk6qW4CtqD5ItZdbtppPy7gOty-7jLWpX1q0ff1Y3-yLuUzwFrD-eTt5fGvch8kSvK_smgshieuEenbfI"/>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-label-lg text-primary">Sarah M.</h4>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Orthodontic Patient</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="min-w-[320px] md:min-w-[400px] lg:min-w-0 glass-card p-10 rounded-[2.5rem] 3d-shadow snap-center flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-electric-cyan mb-6">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <p class="font-body-lg text-body-lg text-primary leading-relaxed mb-8">
+                                "Undergoing a computer-guided implant procedure here was entirely painless and highly efficient. The level of precision technology they use is years ahead of traditional practices."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                <img alt="David R." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH2X83Z4v7z9Na3zEnMwvFizrkLPZjRhapqqqaqV32uZoOQVd1qH_KPwPlaBInNlxGg48gmv89X1ilmYy1HxpJhrYgFRsv4-kRk3ithU5H1pSMlyfSeZ83Bi3XWnnYGlPrbHO6gmt_nxcFiw65ND3N2fCR3Xe7VeSa74CC4DWARd4M_kVgFfrbH8c0nGEntIwKJGaWQWP3x0QD2EtQr7yhcjCCbTOv9eYy2Nr7kX7KiNjx7hLiuScG3f1Sgb0EDo1Gn0lhqp0Nyc4"/>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-label-lg text-primary">David R.</h4>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Implant Patient</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="min-w-[320px] md:min-w-[400px] lg:min-w-0 glass-card p-10 rounded-[2.5rem] 3d-shadow snap-center flex flex-col justify-between">
+                        <div>
+                            <div class="flex gap-1 text-electric-cyan mb-6">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <p class="font-body-lg text-body-lg text-primary leading-relaxed mb-8">
+                                "Their digital smile design program turned my porcelain veneer restoration into an artistic masterpiece. The clinic environment is exceptionally serene, feeling more like a luxury spa."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+                                <img alt="Elena K." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzQVANr9kA_yJxc6bogzpTr4KSD36HtW09qluj-_8G-eufyUHkwkJHhjquTqX_VL9snRckJHLDnesc7Q1DcJPUexnAs2Dl_Hg99Ps9KNq6DFTjg4JObjoN9TXrc8i5JyHN9pQ4eltYFVI5hE2TkMOSkMY8O0W6h3S8N1_J45Dd08bU-6iAfSyB27jzZYohAHIT5--LCB-XIdCrC-AagewcFUM9CzZ0GebjHwdxrtbLfcCWDn7hIV4QG7KJIWXiSjF59crV4aBvnTw"/>
+                            </div>
+                            <div>
+                                <h4 class="font-label-lg text-label-lg text-primary">Elena K.</h4>
+                                <span class="font-label-md text-label-md text-on-surface-variant">Cosmetic Patient</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+           CALL TO ACTION (CTA) SECTION
+           Large promotional billboard urging users to schedule consultations.
+        -->
+        <section class="py-32">
+            <div class="max-w-container-max mx-auto px-margin-desktop">
+                <div class="relative bg-deep-teal rounded-[3rem] p-12 md:p-24 overflow-hidden 3d-shadow text-center">
+                    <!-- Background Glow Elements -->
+                    <div class="absolute top-0 left-0 w-64 h-64 bg-electric-cyan/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+                    
+                    <div class="relative z-10 max-w-2xl mx-auto space-y-8">
+                        <h2 class="font-headline-lg text-headline-lg text-white">Ready for a Transformative Smile?</h2>
+                        <p class="font-body-lg text-body-lg text-white/80">Book your initial digital consultation today and see what our precision technology can do for you.</p>
+                        
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                            <a href="./appointment.html" class="bg-white text-deep-teal px-10 py-5 rounded-2xl font-label-lg text-label-lg hover:bg-secondary-fixed transition-colors 3d-shadow text-center">
+                                Book Appointment
+                            </a>
+                            <button class="border border-white/30 text-white px-10 py-5 rounded-2xl font-label-lg text-label-lg hover:bg-white/10 backdrop-blur-md transition-colors">
+                                Contact Clinic
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- 
+       ====================================================
+       FOOTER
+       ====================================================
+    -->
+    <footer id="about" class="bg-surface-dim py-12 border-t border-surface-container-high">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop max-w-container-max mx-auto items-start">
+            
+            <!-- Branding & Socials -->
+            <div class="space-y-6">
+                <div class="text-headline-md font-headline-md text-deep-teal">Panthi Clinic</div>
+                <p class="text-soft-slate font-body-md text-body-md max-w-xs">Precision dental care using state-of-the-art 3D imaging and patient-centric methods.</p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-electric-cyan transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-electric-cyan transition-all" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+                    <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-electric-cyan transition-all" href="#"><span class="material-symbols-outlined text-sm">call</span></a>
+                </div>
+            </div>
+            
+            <!-- Links Column -->
+            <div class="grid grid-cols-2 gap-8 md:col-span-2">
+                <div class="space-y-4">
+                    <h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Clinic Hours</a></li>
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Contact Us</a></li>
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Find Us</a></li>
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-label-lg text-label-lg text-primary uppercase tracking-widest">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Privacy Policy</a></li>
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Terms of Service</a></li>
+                        <li><a class="font-body-md text-body-md text-soft-slate hover:text-electric-cyan transition-opacity" href="#">Patient Rights</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom copyright bar -->
+        <div class="mt-12 pt-8 border-t border-surface-container-high max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-soft-slate font-body-md text-body-md">© 2024 Panthi Clinic. Precision Dental Excellence.</p>
+            <div class="flex gap-6">
+                <span class="font-label-md text-label-md text-deep-teal/50">Modern Clinical Artistry</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+       ====================================================
+       MOBILE FLOATING ACTION BUTTON
+       ====================================================
+    -->
+    <a href="./appointment.html" class="md:hidden fixed bottom-6 right-6 w-16 h-16 bg-deep-teal text-white rounded-full 3d-shadow z-50 flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+    </a>
+
+    <!-- 
+       ====================================================
+       SCRIPTS SECTION
+       ====================================================
+       Modular homepage script loaded at body end for faster parsing & load performance.
+    -->
+    <script src="../js/homepage.js"></script>
+</body>
+</html>
