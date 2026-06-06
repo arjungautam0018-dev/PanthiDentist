@@ -58,27 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('header nav a');
 
     function scrollSpy() {
-        // Offset scroll calculation to account for fixed navbar height (approx 120px)
-        const scrollPosition = window.scrollY + 150;
+        const navHeight = 80;
+        const scrollPosition = window.scrollY + navHeight + 10;
+        const nearBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+        let activeId = null;
 
-            // Check if the current scroll position resides inside the bounds of the section
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    // Reset to standard visual state (inactive)
-                    link.classList.remove('text-primary', 'font-bold', 'border-electric-cyan');
-                    link.classList.add('text-on-surface-variant', 'border-transparent');
-                    
-                    // If link matches the active visible section, apply active classes
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('text-primary', 'font-bold', 'border-electric-cyan');
-                        link.classList.remove('text-on-surface-variant', 'border-transparent');
-                    }
-                });
+        if (nearBottom) {
+            activeId = 'about';
+        } else {
+            sections.forEach(section => {
+                if (scrollPosition >= section.offsetTop) {
+                    activeId = section.getAttribute('id');
+                }
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.classList.remove('text-primary', 'font-bold', 'border-electric-cyan');
+            link.classList.add('text-on-surface-variant', 'border-transparent');
+            if (activeId && link.getAttribute('href') === `#${activeId}`) {
+                link.classList.add('text-primary', 'font-bold', 'border-electric-cyan');
+                link.classList.remove('text-on-surface-variant', 'border-transparent');
             }
         });
     }
